@@ -11,7 +11,7 @@ personas_df = pd.DataFrame(
 print(personas_df)
 print(personas_df.info())
 
-#acessando colunas
+# acessando colunas
 print(personas_df.columns)
 
 #acessando tipos de colunas
