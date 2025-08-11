@@ -2,7 +2,7 @@ def ddl():
     import sqlite3
     
     # Conecta ao banco
-    banco = input('Digite o nome do banco: ')
+    banco = input('Digite o nome do banco(ex: teste.db): ')
     con = sqlite3.connect(banco)
     cur = con.cursor()
 
@@ -18,7 +18,7 @@ def dml():
     import sqlite3
     import pandas as pd
     
-    banco = input('Digite o nome do banco: ')
+    banco = input('Digite o nome do banco(ex: teste.db): ')
     con = sqlite3.connect(banco)
     cur = con.cursor()
 
@@ -41,9 +41,12 @@ CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEX
 '''
 ddl()
 
-'''INSERT INTO users (name, email) VALUES ("Joao silva", "joao.silva@example.com")
+'''
+INSERT INTO users (name, email) VALUES ("Joao silva", "joao.silva@example.com")
 '''
 ddl()
 
-'''SELECT * FROM users'''
+'''
+SELECT * FROM users
+'''
 dml()
