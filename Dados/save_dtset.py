@@ -12,4 +12,4 @@ del data['Unnamed: 0'] #deletando a primeira coluna
 print(data.head(6))
 print(list(data.columns)) #imprimindo o nome das colunas
 
-data.to_csv('./datasets/GasPricesinBrazil_2004-2019_new.csv', sep=';', index=False)
+data.to_csv('./datasets/GasPricesinBrazil_2004-2019_new.csv', sep=';', index=False) #salvando o dataset, sem o index das linhas
