@@ -1,6 +1,6 @@
-### Olá, sou o Júlio! 👋
+### Olá, sou o Júlio!
 
-Bem-vindos à pasta **Dados** do meu repositório de Python Data Science. Aqui você encontrará **scripts e datasets organizados** para análise exploratória, manipulação de dados e experimentos em ciência de dados.
+Bem-vindos à pasta **pandas** do meu repositório de Python Data Science. Aqui você encontrará **scripts e datasets organizados** para análise exploratória, manipulação de dados e experimentos em ciência de dados.
 
 ---
 
@@ -23,21 +23,6 @@ Bem-vindos à pasta **Dados** do meu repositório de Python Data Science. Aqui v
       <td align="center" width="96">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" width="48" height="48" alt="Pandas" />
         <br>Pandas
-      </td>
-      <td align="center" width="96">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" width="48" height="48" alt="SQLite" />
-        <br>SQLite
-      <td align="center" width="96">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openpyxl/openpyxl-original.svg" width="48" height="48" alt="OpenPyXL" />
-        <br>OpenPyXL
-      </td>
-      <td align="center" width="96">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" width="48" height="48" alt="Matplotlib" />
-        <br>Matplotlib
-      </td>
-      <td align="center" width="96">
-        <img src="https://seaborn.pydata.org/_static/logo-mark-lightbg.svg" width="48" height="48" alt="Seaborn" />
-        <br>Seaborn
       </td>
     </tr>
   </table>

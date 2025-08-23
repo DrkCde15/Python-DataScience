@@ -1,14 +1,20 @@
-### Olá, sou o Júlio! 👋
+### Olá, sou o Júlio!
 
-Bem-vindos à pasta **Dados** do meu repositório de Python Data Science. Aqui você encontrará **scripts e datasets organizados** para análise exploratória, manipulação de dados e experimentos em ciência de dados.
+Bem-vindos à pasta **seaborn** do meu repositório de Python Data Science. Aqui você encontrará **scripts e datasets organizados** para análise exploratória, manipulação de tabelas.
 
 ---
 
 ## 📁 Estrutura da Pasta
 
-- `Dados/`  
-  Scripts em Python para **visualização e manipulação de dados** gerais.
+- `seaborn/`  
+  Scripts em Python para **visualização e manipulação de tabelas**.
 
+---
+
+## 📁 Documentação
+```
+https://seaborn.pydata.org/api.html
+```
 ---
 
 ## 🧰 Ferramentas e Tecnologias
@@ -25,13 +31,6 @@ Bem-vindos à pasta **Dados** do meu repositório de Python Data Science. Aqui v
         <br>Pandas
       </td>
       <td align="center" width="96">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" width="48" height="48" alt="SQLite" />
-        <br>SQLite
-      <td align="center" width="96">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openpyxl/openpyxl-original.svg" width="48" height="48" alt="OpenPyXL" />
-        <br>OpenPyXL
-      </td>
-      <td align="center" width="96">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" width="48" height="48" alt="Matplotlib" />
         <br>Matplotlib
       </td>
@@ -46,10 +45,9 @@ Bem-vindos à pasta **Dados** do meu repositório de Python Data Science. Aqui v
 ---
 
 ## 📚 Aprendizados
-
-- Limpeza e transformação de dados  
-- Análise exploratória de datasets  
-- Visualização de dados
+ 
+- Análise exploratória de tabelas 
+- Visualização de tabelas
 
 ---
 
