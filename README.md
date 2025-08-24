@@ -16,11 +16,13 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
   Scripts em Python para **criação, visualização e alteração de tabelas SQLite**.
 
 - `pandas/`
+  Scripts em Python para **visualização de tabelas e manipulação de dados** usando o Pandas.
 
 - `matplotlib/`
+  Scripts em Python para **visualização, criação e manipulação de dados** usando Matplotlib.
 
 - `seaborn/`
-
+  Scripts em Python para **visualização, criação e manipulação de dados** usando Seaborn.
 ---
 
 ## 🧰 Ferramentas e Tecnologias
