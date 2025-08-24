@@ -23,6 +23,6 @@ def dml():
     con.close
     
 '''
-SELECT modelo, valor FROM tel WHERE valor BETWEEN 1000.0 AND 2000.0
+SELECT modelo, valor FROM tel WHERE valor BETWEEN 1000.0 AND 2000.0;
 '''
 dml()
