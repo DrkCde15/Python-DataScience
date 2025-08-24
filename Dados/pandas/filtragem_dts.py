@@ -54,7 +54,6 @@ print(select_2)
 df_rj_preco = df_rj[select_2]
 print(df_rj_preco)
 
-
 selecao = (data['ESTADO'] == 'RIO DE JANEIRO') | (data['ESTADO'] == 'SAO PAULO')
 print(selecao)
 print(data[selecao])

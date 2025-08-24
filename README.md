@@ -1,6 +1,6 @@
 ### Olá, sou o Júlio!
 
-Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará **scripts e datasets organizados** para análise exploratória, manipulação de dados e experimentos em ciência de dados.
+Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará **scripts e datasets organizados** para análise exploratória de gráficos e bancos de dados, manipulação de dados e experimentos em ciência de dados.
 
 ---
 
@@ -14,6 +14,12 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
 
 - `data_sql/`  
   Scripts em Python para **criação, visualização e alteração de tabelas SQLite**.
+
+- `pandas/`
+
+- `matplotlib/`
+
+- `seaborn/`
 
 ---
 
@@ -43,6 +49,14 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
       <td align="center" width="96">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openpyxl/openpyxl-original.svg" width="48" height="48" alt="OpenPyXL" />
         <br>OpenPyXL
+      </td>
+      <td align="center" width="96">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" width="48" height="48" alt="Matplotlib" />
+        <br>Matplotlib
+      </td>
+      <td align="center" width="96">
+        <img src="https://seaborn.pydata.org/_static/logo-mark-lightbg.svg" width="48" height="48" alt="Seaborn" />
+        <br>Seaborn
       </td>
     </tr>
     <tr>

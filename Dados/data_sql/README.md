@@ -1,5 +1,3 @@
-### Olá, sou o Júlio!
-
 Bem-vindos à pasta **data_sql** do meu repositório de Python Data Science. Aqui você encontrará **scripts e tabelas organizados** para análise exploratória, manipulação de dados e experimentos em tabelas SQL utilizando o python.
 
 ---
@@ -7,7 +5,7 @@ Bem-vindos à pasta **data_sql** do meu repositório de Python Data Science. Aqu
 ## 📁 Estrutura da Pasta
 
 - `data_sql/`  
-  Scripts em Python para **visualização e manipulação de dados** gerais.
+  Scripts em Python para **visualização e manipulação de dados** em tabelas SQL não relacionais.
 
 ---
 

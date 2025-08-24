@@ -1,12 +1,10 @@
-### Olá, sou o Júlio!
-
 Bem-vindos ao meu repositório **data_excel**. Aqui você encontrará **scripts e tabelas organizadas** para análise de informações, manipulação de dados e criação de tabelas no excel.
 ---
 
 ## 📁 Estrutura da Pasta
 
 - `data_excel/`  
-  Scripts em Python para **criação e manipulação de arquivos Excel**, incluindo fórmulas, gráficos e leitura de dados.
+  Scripts em Python para **criação e manipulação de arquivos Excel**, incluindo fórmulas, gráficos e leitura de dados em planilhas Excel.
 
 ---
 

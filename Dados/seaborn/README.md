@@ -1,6 +1,4 @@
-### Olá, sou o Júlio!
-
-Bem-vindos à pasta **seaborn** do meu repositório de Python Data Science. Aqui você encontrará **scripts e datasets organizados** para análise exploratória, manipulação de tabelas.
+Bem-vindos à pasta **Seaborn** do meu repositório de Python Data Science. Aqui você encontrará **scripts e datasets organizados** para análise exploratória e manipulação de gráficos.
 
 ---
 
