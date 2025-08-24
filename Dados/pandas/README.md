@@ -1,5 +1,4 @@
 Bem-vindos à pasta **pandas** do meu repositório de Python Data Science. Aqui você encontrará **scripts e datasets organizados** para análise exploratória, manipulação de dados e experimentos em ciência de dados.
-
 ---
 
 ## 📁 Estrutura da Pasta

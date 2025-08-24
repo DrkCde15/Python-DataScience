@@ -1,5 +1,4 @@
 Bem-vindos à pasta **Seaborn** do meu repositório de Python Data Science. Aqui você encontrará **scripts e datasets organizados** para análise exploratória e manipulação de gráficos.
-
 ---
 
 ## 📁 Estrutura da Pasta

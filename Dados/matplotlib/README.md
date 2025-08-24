@@ -1,5 +1,4 @@
 Bem-vindos à pasta **Matplotlib** do meu repositório de Python Data Science. Aqui você encontrará **scripts e datasets organizados** para análise, manipulação e aprendizado da biblioteca **Matplotlib**.
-
 ---
 
 ## 📁 Estrutura da Pasta
