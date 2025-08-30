@@ -11,8 +11,6 @@ headers = ["Produto", "Quantidade", "Preço"] #criando um cabecalho para a plani
 for colum, header in enumerate(headers, start=1): #criando uma coluna para cada cabecalho e atribuindo um valor
     sheet.cell(row=1, column=colum, value=header)
 
-
-
 def gera_produto(): #criando uma funcao para gerar um produto aleatorio
     prefixos = ['Super', 'Mega', 'Gigante', 'Ultra', 'Power', 'Max']
     tipos = ['Wiget', 'Gadget', 'Device', 'Tool', 'Component']
