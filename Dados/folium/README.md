@@ -27,6 +27,10 @@ https://python-visualization.github.io/folium/latest/reference.html
         <br>Python
       </td>
       <td align="center" width="96">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" width="48" height="48" alt="Pandas" />
+        <br>Pandas
+      </td>
+      <td align="center" width="96">
         <img src="https://raw.githubusercontent.com/python-visualization/folium/main/docs/_static/folium_logo.png" width="48" height="48" alt="Folium" />
         <br>Folium
       </td>
