@@ -16,7 +16,7 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
   Scripts em Python para **criação, visualização e alteração de tabelas SQLite**.
 
 - `folium/`  
-  Scripts em Python para a **criação e manipulação de tabelas**.
+  Scripts em Python para a **criação e manipulação de mapas**.
 
 - `pandas/`
   Scripts em Python para **visualização de tabelas e manipulação de dados** usando o Pandas.

@@ -4,7 +4,7 @@ Bem-vindos à pasta **Folium** do meu repositório de Python Data Science. Aqui 
 ## 📁 Estrutura da Pasta
 
 - `folium/`  
-  Scripts em Python para a **criação e manipulação de tabelas**.
+  Scripts em Python para a **criação e manipulação de mapas**.
 
 - `mapas/`
   Mapas interativos criados com o **foluim**.
