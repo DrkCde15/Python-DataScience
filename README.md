@@ -15,6 +15,9 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
 - `data_sql/`  
   Scripts em Python para **criação, visualização e alteração de tabelas SQLite**.
 
+- `folium/`  
+  Scripts em Python para a **criação e manipulação de tabelas**.
+
 - `pandas/`
   Scripts em Python para **visualização de tabelas e manipulação de dados** usando o Pandas.
 
@@ -42,11 +45,13 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" width="48" height="48" alt="Jupyter" />
         <br>Jupyter
       </td>
-    </tr>
-    <tr>
       <td align="center" width="96">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" width="48" height="48" alt="SQLite" />
         <br>SQLite
+      </td>
+      <td align="center" width="96">
+        <img src="https://raw.githubusercontent.com/python-visualization/folium/main/docs/_static/folium_logo.png" width="48" height="48" alt="Folium" />
+        <br>Folium
       </td>
       <td align="center" width="96">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openpyxl/openpyxl-original.svg" width="48" height="48" alt="OpenPyXL" />
@@ -75,7 +80,7 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
 - Visualização de dados  
 - Preparação de dados para modelos de aprendizado de máquina  
 - Manipulação de arquivos Excel e bancos de dados SQLite
-
+- Criação e Manipulação de Mapas 
 ---
 
 ## 🔗 Contatos
