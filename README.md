@@ -24,6 +24,9 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
 - `matplotlib/`
   Scripts em Python para **visualização, criação e manipulação de dados** usando Matplotlib.
 
+- `pyspark/`
+  Scripts em Python para **visualização, criação e manipulação de dados** usando PySpark.
+
 - `seaborn/`
   Scripts em Python para **visualização, criação e manipulação de dados** usando Seaborn.
 ---
@@ -60,6 +63,10 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
       <td align="center" width="96">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" width="48" height="48" alt="Matplotlib" />
         <br>Matplotlib
+      </td>
+      <td align="center" width="96">
+        <img src="https://spark.apache.org/images/spark-logo-rev.svg" width="48" height="48" alt="PySpark" />
+        <br>PySpark
       </td>
       <td align="center" width="96">
         <img src="https://seaborn.pydata.org/_static/logo-mark-lightbg.svg" width="48" height="48" alt="Seaborn" />
