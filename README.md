@@ -27,6 +27,9 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
 - `pyspark/`
   Scripts em Python para **visualização, criação e manipulação de dados** usando PySpark.
 
+- `scikit-learn/`
+  Scipts em Python para **aprendizado de máquina** usando o Scikit-Learn.
+
 - `seaborn/`
   Scripts em Python para **visualização, criação e manipulação de dados** usando Seaborn.
 ---
