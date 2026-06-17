@@ -1,0 +1,5 @@
+[theme]
+primaryColor = "#A350FF" # Elementos interativos
+backgroundColor = "#0FB3FC" # cor de fundo
+textColor = "#F3CCAE"
+font = "Arial"
