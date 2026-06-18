@@ -32,6 +32,9 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
 
 - `seaborn/`
   Scripts em Python para **visualização, criação e manipulação de dados** usando Seaborn.
+
+- `streamlit/`
+  Scripts em Python para **visualização, criação e manipulação de dados** usando Streamlit.
 ---
 
 ## 🧰 Ferramentas e Tecnologias
@@ -56,7 +59,7 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
         <br>SQLite
       </td>
       <td align="center" width="96">
-        <img src="https://raw.githubusercontent.com/python-visualization/folium/main/docs/_static/folium_logo.png" width="48" height="48" alt="Folium" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/folium/folium-original.svg" width="48" height="48" alt="Folium" />
         <br>Folium
       </td>
       <td align="center" width="96">
@@ -77,6 +80,14 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
       </td>
     </tr>
     <tr>
+      <td align="center" width="96">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/streamlit/streamlit-original.svg" width="48" height="48" alt="Streamlit" />
+        <br>Streamlit
+      </td>
+      <td align="center" width="96">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" width="48" height="48" alt="Scikit-Learn" />
+        <br>Scikit-Learn
+      </td>
     </tr>
   </table>
 </div>
