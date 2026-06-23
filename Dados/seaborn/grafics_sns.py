@@ -1,38 +1,93 @@
+"""
+Seaborn: Visualização estatística de dados.
+
+Demonstra os principais tipos de gráficos do Seaborn:
+dispersão, distribuições, regressão linear e relacionais.
+"""
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 
+# ============================================================
+# CARREGAMENTO DOS DADOS
+# ============================================================
+
 df = pd.read_excel('./produtos_ficticios.xlsx')
-print (df)
+print("Dados carregados:")
+print(df)
 
-# Gráfico de Dispersão
+# ============================================================
+# GRÁFICOS DE DISPERSÃO (SCATTERPLOT)
+# ============================================================
+
+# Dispersão simples
 sns.scatterplot(data=df, x='Preço', y='Nome do produto')
+
+# Com diferenciação por categoria (hue)
 sns.scatterplot(data=df, x='Preço', y='Nome do produto', hue='Categoria')
+
+# Com hue + marcadores diferentes (style)
 sns.scatterplot(data=df, x='Preço', y='Nome do produto', hue='Categoria', style='Categoria')
-sns.scatterplot(data=df, x='Preço', y='Nome do produto', hue='Descrição', style='Categoria')
-sns.scatterplot(data=df, x='Preço', y='Nome do produto', hue='Descrição', style='Categoria', palette= ['red', 'green', 'blue', 'yellow', 'purple'])
+
+# Dispersão por descrição com paleta personalizada
+sns.scatterplot(
+    data=df, x='Preço', y='Nome do produto',
+    hue='Descrição', style='Categoria',
+    palette=['red', 'green', 'blue', 'yellow', 'purple']
+)
 plt.show()
 
-# Gráfico de Dispersão Relacional
-grafico_rel = sns.relplot(data=df, x='Preço', y='Nome do produto', hue='Categoria', col='Categoria')
-grafico_rel.set_titles('Este grafico representa a Categoria de {col_name}')
+# ============================================================
+# GRÁFICO RELACIONAL COM FACETAS (relplot)
+# ============================================================
+
+grafico_rel = sns.relplot(
+    data=df, x='Preço', y='Nome do produto',
+    hue='Categoria', col='Categoria'
+)
+grafico_rel.set_titles('Categoria: {col_name}')
 plt.show()
 
-# Gráfico de linhas
+# ============================================================
+# GRÁFICO DE LINHAS (lineplot)
+# ============================================================
+
 df_precos = pd.read_excel('./produtos_ficticios.xlsx')
-print(df_precos[['Preço', 'Categoria']]) #imprimindo as colunas Preço e Categoria
-graf_line = sns.lineplot(data=df_precos, x='Preço', y='Categoria', color = 'red')
+graf_line = sns.lineplot(data=df_precos, x='Preço', y='Categoria', color='red')
 plt.show()
 
-# Histogramas
+# ============================================================
+# HISTOGRAMAS E DISTRIBUIÇÕES (displot)
+# ============================================================
+
+# Histograma simples
 fig = sns.displot(data=df, x='Categoria')
-fig = sns.displot(data=df, x='Preço', kind='kde') # kde fuciona apenas com dados numericos
-fig = sns.displot(data=df, x='Categoria', kind='hist')
-fig = sns.displot(data=df, x='Categoria', kind='ecdf')
-fig = sns.displot(data=df, x='Categoria', hue='Descrição', col='Categoria', rug=True)
+
+# KDE (funciona apenas com dados numéricos)
+sns.displot(data=df, x='Preço', kind='kde')
+
+# Histograma explícito
+sns.displot(data=df, x='Categoria', kind='hist')
+
+# ECDF (distribuição acumulada)
+sns.displot(data=df, x='Categoria', kind='ecdf')
+
+# Histograma com rug e facetas por categoria
+sns.displot(data=df, x='Categoria', hue='Descrição', col='Categoria', rug=True)
 plt.show()
 
-# Regreção linear
+# ============================================================
+# REGRESSÃO LINEAR
+# ============================================================
+
+# Regressão simples
 sns.regplot(data=df, x='Preço', y='Quantidade em estoque')
-sns.lmplot(data=df, x='Preço', y='Quantidade em estoque', hue='Categoria', palette= ['red', 'green', 'blue'], col='Categoria', markers=['o', 'v', 'x'])
+
+# Regressão com facetas por categoria
+sns.lmplot(
+    data=df, x='Preço', y='Quantidade em estoque',
+    hue='Categoria', col='Categoria',
+    palette=['red', 'green', 'blue'],
+    markers=['o', 'v', 'x']
+)
 plt.show()

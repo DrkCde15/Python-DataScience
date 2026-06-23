@@ -1,26 +1,28 @@
-# AND | OR | NOT
+"""
+SQLite: Operadores lógicos AND, OR, NOT.
+
+Demonstra combinação de múltiplas condições em consultas
+para filtrar registros de forma mais precisa.
+"""
+import sqlite3
+import pandas as pd
+
 
 def dml():
-    import sqlite3
-    import pandas as pd
-    
-    # Conecta ao banco
+    """Executa SELECT com operadores lógicos e exibe como DataFrame."""
     con = sqlite3.connect('./table/loja.db')
     cur = con.cursor()
-    
+
     query = input('Digite a Query desejada: ')
     cur.execute(query)
-    
-    users = cur.fetchall() # retorna uma tupla
 
-    # seleciona os nomes das colunas
-    coluns = [desc[0] for desc in cur.description]
+    registros = cur.fetchall()
+    colunas = [desc[0] for desc in cur.description]
 
-    # cria um dataframe a partir da tupla e das colunas
-    df_clientes = pd.DataFrame(users, columns=coluns)
-    print(df_clientes)
+    df = pd.DataFrame(registros, columns=colunas)
+    print(df)
 
-    con.close
+    con.close()
     
 '''
 SELECT * FROM cliente WHERE estado_civil = 'S' OR cidade = 'Sao Paulo';

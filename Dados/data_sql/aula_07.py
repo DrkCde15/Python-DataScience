@@ -1,40 +1,40 @@
-# CRIANDO BANCO DA LOJA
+"""
+SQLite: Criação do banco de dados da loja.
+
+Cria as tabelas 'cliente', 'marca', 'tel' e 'venda' no banco
+loja.db, insere dados de exemplo e faz consultas iniciais.
+"""
+import sqlite3
+import pandas as pd
+
 
 def ddl():
-    import sqlite3
-    
-    # Conecta ao banco
+    """Executa comando DDL (criação/inserção) no banco loja.db."""
     con = sqlite3.connect('./table/loja.db')
     cur = con.cursor()
-    
+
     consulta = input('Digite o comando SQL: ')
     cur.execute(consulta)
-    
-    # Insere dados na tabela
+
     con.commit()
-    con.close
+    con.close()
+
 
 def dml():
-    import sqlite3
-    import pandas as pd
-    
-    # Conecta ao banco
+    """Executa consulta SELECT no banco loja.db e exibe como DataFrame."""
     con = sqlite3.connect('./table/loja.db')
     cur = con.cursor()
-    
+
     query = input('Digite a Query desejada: ')
     cur.execute(query)
-    
-    users = cur.fetchall() # retorna uma tupla
 
-    # seleciona os nomes das colunas
-    coluns = [desc[0] for desc in cur.description]
+    registros = cur.fetchall()
+    colunas = [desc[0] for desc in cur.description]
 
-    # cria um dataframe a partir da tupla e das colunas
-    df_clientes = pd.DataFrame(users, columns=coluns)
-    print(df_clientes)
+    df = pd.DataFrame(registros, columns=colunas)
+    print(df)
 
-    con.close
+    con.close()
 
 
 '''

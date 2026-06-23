@@ -1,52 +1,61 @@
+"""
+SQLite: Funções genéricas DDL e DML.
+
+Fornece funções reutilizáveis para executar comandos SQL
+(DDL para criação/alteração, DML para consultas) e exibir
+resultados como DataFrame do pandas.
+"""
+import sqlite3
+import pandas as pd
+
+
 def ddl():
-    import sqlite3
-    
-    # Conecta ao banco
-    banco = input('Digite o nome do banco(ex: teste.db): ')
+    """
+    Executa um comando DDL (Data Definition Language).
+    Útil para CREATE, ALTER, DROP, INSERT, UPDATE, DELETE.
+    Pede o nome do banco e o comando SQL via input().
+    """
+    banco = input('Digite o nome do banco (ex: teste.db): ')
     con = sqlite3.connect(banco)
     cur = con.cursor()
 
-    # Cria a tabela
     consulta = input('Digite o comando SQL: ')
     cur.execute(consulta)
-    
-    # Insere dados na tabela
+
     con.commit()
-    con.close
+    con.close()
+
 
 def dml():
-    import sqlite3
-    import pandas as pd
-    
-    banco = input('Digite o nome do banco(ex: teste.db): ')
+    """
+    Executa uma consulta DML (Data Manipulation Language).
+    Útil para SELECT. Exibe o resultado como DataFrame do pandas.
+    """
+    banco = input('Digite o nome do banco (ex: teste.db): ')
     con = sqlite3.connect(banco)
     cur = con.cursor()
 
     query = input('Digite a Query desejada: ')
     cur.execute(query)
-    
-    users = cur.fetchall() # retorna uma tupla
 
-    # seleciona os nomes das colunas
-    coluns = [desc[0] for desc in cur.description]
+    registros = cur.fetchall()
+    colunas = [desc[0] for desc in cur.description]
 
-    # cria um dataframe a partir da tupla e das colunas
-    df_clientes = pd.DataFrame(users, columns=coluns)
-    print(df_clientes)
+    df = pd.DataFrame(registros, columns=colunas)
+    print(df)
 
-    con.close
+    con.close()
 
-'''
-CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, email TEXT NOT NULL UNIQUE)
-'''
-ddl()
 
-'''
-INSERT INTO users (name, email) VALUES ("Joao silva", "joao.silva@example.com")
-'''
-ddl()
+# ============================================================
+# EXEMPLOS DE USO (descomente para executar)
+# ============================================================
 
-'''
-SELECT * FROM users
-'''
-dml()
+# Criação da tabela users
+# ddl()  -- digite: CREATE TABLE IF NOT EXISTS users (...)
+
+# Inserção de dados
+# ddl()  -- digite: INSERT INTO users (...)
+
+# Consulta
+# dml()  -- digite: SELECT * FROM users

@@ -6,35 +6,35 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
 
 ## 📁 Estrutura da Pasta
 
-- `Dados/`  
-  Scripts em Python para **visualização e manipulação de dados** gerais.
+### `numpy/`
+  Introdução ao **NumPy**: criação de arrays, operações vetoriais, indexação, fatiamento, matrizes especiais e geração de números aleatórios.
 
-- `data_excel/`  
-  Scripts em Python para **criação e manipulação de arquivos Excel**, incluindo fórmulas, gráficos e leitura de dados.
+### `pandas/`
+  **Manipulação de dados com Pandas**: criação de DataFrames, seleção e filtragem de dados, agregações, índices (`iloc`/`loc`), importação/exportação CSV. Baseado no dataset de preços de combustíveis no Brasil.
 
-- `data_sql/`  
-  Scripts em Python para **criação, visualização e alteração de tabelas SQLite**.
+### `matplotlib/`
+  **Visualização com Matplotlib**: gráficos de linha, dispersão, barras; subplots; personalização completa de eixos, legendas, cores e exportação de figuras.
 
-- `folium/`  
-  Scripts em Python para a **criação e manipulação de mapas**.
+### `seaborn/`
+  **Visualização estatística com Seaborn**: dispersão com categorias, histogramas, distribuições KDE, regressão linear e gráficos relacionais.
 
-- `pandas/`
-  Scripts em Python para **visualização de tabelas e manipulação de dados** usando o Pandas.
+### `data_excel/`
+  **Criação e manipulação de arquivos Excel**: geração de planilhas com OpenPyXL, inserção de fórmulas (preço de venda, total, lucro) e criação de gráficos (barras, linhas, pizza).
 
-- `matplotlib/`
-  Scripts em Python para **visualização, criação e manipulação de dados** usando Matplotlib.
+### `data_sql/`
+  **Banco de dados SQLite**: 16 aulas progressivas cobrindo DDL (CREATE), DML (INSERT/SELECT/UPDATE/DELETE) e cláusulas SQL (WHERE, DISTINCT, ORDER BY, LIKE, LIMIT, AND/OR/NOT, IN, BETWEEN). Integração com Pandas.
 
-- `pyspark/`
-  Scripts em Python para **visualização, criação e manipulação de dados** usando PySpark.
+### `folium/`
+  **Mapas interativos com Folium**: notebooks Jupyter para criação de mapas com marcadores, diferentes tiles e camadas.
 
-- `scikit-learn/`
-  Scipts em Python para **aprendizado de máquina** usando o Scikit-Learn.
+### `scikit-learn/`
+  **Aprendizado de Máquina com Scikit-Learn**: aulas e exercícios cobrindo classificação (KNN, Regressão Logística), regressão (Linear, Ridge), pré-processamento, feature engineering, métricas de avaliação, regularização e curva ROC.
 
-- `seaborn/`
-  Scripts em Python para **visualização, criação e manipulação de dados** usando Seaborn.
+### `streamlit/`
+  **Aplicações web com Streamlit**: 16 aulas do básico ao avançado — texto, layout, dados, estado de sessão, caching, visualização (Matplotlib/Plotly/Altair), formulários, integração com SQLite/API, PDFs, métricas, abas, editor de dados e diálogos.
 
-- `streamlit/`
-  Scripts em Python para **visualização, criação e manipulação de dados** usando Streamlit.
+### `pyspark/`
+  Scripts introdutórios para **PySpark**.
 ---
 
 ## 🧰 Ferramentas e Tecnologias
@@ -96,12 +96,13 @@ Bem-vindos ao meu repositório **Python Data Science**. Aqui você encontrará *
 
 ## 📚 Aprendizados
 
-- Limpeza e transformação de dados  
-- Análise exploratória de datasets  
-- Visualização de dados  
-- Preparação de dados para modelos de aprendizado de máquina  
-- Manipulação de arquivos Excel e bancos de dados SQLite
-- Criação e Manipulação de Mapas 
+- **Fundamentos**: NumPy (arrays, operações vetoriais) → Pandas (DataFrames, filtros, agregações)
+- **Visualização**: Matplotlib (gráficos estáticos) → Seaborn (estatísticas) → Folium (mapas)
+- **Manipulação de dados**: Excel (OpenPyXL) e SQL (SQLite + Python)
+- **Machine Learning**: Scikit-Learn (classificação, regressão, pré-processamento, métricas)
+- **Web Apps**: Streamlit (dashboards interativos, deploy de modelos)
+- **Big Data**: PySpark (processamento distribuído)
+
 ---
 
 ## 🔗 Contatos

@@ -1,78 +1,114 @@
+"""
+Pandas: Filtragem e seleção condicional de dados.
+
+Demonstra diferentes técnicas de filtragem:
+  - Máscaras booleanas
+  - .loc e .query()
+  - Operadores & (AND), | (OR), != (XOR)
+  - Filtros encadeados
+  - Reset de índice após filtragem
+"""
 import pandas as pd
 
-#carregando dataset usando
+# ============================================================
+# CARREGAMENTO E VISUALIZAÇÃO INICIAL
+# ============================================================
+
 data = pd.read_csv('./datasets/GasPricesinBrazil_2004-2019.csv', sep=';')
+print("Primeiras 6 linhas:")
 print(data.head(6))
 
-#filtrando amostras
-print(data['ESTADO'].unique()) #imprimindo os estados unicos
-print([data['ESTADO'] == 'SAO PAULO']) #faz uma comparação com o estado SAO PAULO retornando um booleano
+# ============================================================
+# FILTRAGEM COM MÁSCARAS BOOLEANAS
+# ============================================================
 
+print("\nEstados únicos no dataset:")
+print(data['ESTADO'].unique())
+
+# Máscara booleana: comparação elemento a elemento
 selecao = data['ESTADO'] == 'SAO PAULO'
-print(selecao) #imprimindo o booleano da comparação com o estado SAO PAULO
+print(f"\nTipo da máscara: {type(selecao)}")
+print(f"Shape da máscara: {selecao.shape}")
+print(f"Shape do dataset: {data.shape}")
 
-print(type(selecao)) #imprimindo o tipo do booleano
-print(selecao.shape) #imprimindo o shape do booleano
-print(data.shape) #imprimindo o shape do dataframe
+# Aplicando a máscara ao DataFrame
+print("\nPostos de SAO PAULO (notação direta):")
+print(data[selecao])
 
-print(data[selecao]) #imprimindo as linhas onde o estado eh SAO PAULO
+# Usando .loc para filtragem baseada em rótulo
+print("\nPostos de SAO PAULO (.loc):")
+print(data.loc[selecao])
 
-print(data.loc[selecao]) #imprimindo as linhas onde o estado eh SAO PAULO
+# Usando .query() - sintaxe mais legível para filtros
+print("\nPostos de SAO PAULO (.query):")
+print(data.query('ESTADO == "SAO PAULO"'))
 
-print(data.query('ESTADO == "SAO PAULO"')) #imprimindo as linhas onde o estado eh SAO PAULO
+# ============================================================
+# RESET DE ÍNDICE APÓS FILTRAGEM
+# ============================================================
 
 postos_sp = data.query('ESTADO == "SAO PAULO"')
-print(postos_sp.reset_index()) #imprimindo as linhas onde o estado eh SAO PAULO e resetando o index das linhas para 0
 
-print(postos_sp.reset_index(drop=True)) #imprimindo as linhas onde o estado eh SAO PAULO e resetando o index das linhas para 0
+# Reset mantendo o índice original como coluna
+print("\nReset com índice original:")
+print(postos_sp.reset_index())
 
-postos_sp.reset_index(drop=True, inplace=True) #resetando o index das linhas para 0 e salvando no dataframe
+# Reset descartando o índice original
+print("\nReset sem índice original:")
+print(postos_sp.reset_index(drop=True))
+
+# Reset inplace (modifica o próprio DataFrame)
+postos_sp.reset_index(drop=True, inplace=True)
+print("\nApós reset inplace:")
 print(postos_sp)
 
+# ============================================================
+# FILTROS COM OPERADORES LÓGICOS
+# ============================================================
 
-print(data['PREÇO MÉDIO REVENDA'].unique()) #imprimindo os estados unicos
-print(data['PREÇO MÉDIO REVENDA']) #imprimindo a coluna PREÇO MÉDIO REVENDA
-
-selecao = (data['ESTADO'] == 'RIO DE JANEIRO') & (data['PREÇO MÉDIO REVENDA']> 2.0) #imprimindo as linhas onde o estado eh RIO DE JANEIRO e a coluna PREÇO MÉDIO REVENDA eh maior que 2
-print(selecao)
-
-selecao = (data['ESTADO'] == 'RIO DE JANEIRO') | (data['PREÇO MÉDIO REVENDA']> 2.0) #imprimindo as linhas onde o estado eh RIO DE JANEIRO ou a coluna PREÇO MÉDIO REVENDA eh maior que 2
-print(selecao)
-
-selecao = (data['ESTADO'] == 'RIO DE JANEIRO') != (data['PREÇO MÉDIO REVENDA']> 2.0) #imprimindo as linhas onde o estado eh RIO DE JANEIRO e a coluna PREÇO MÉDIO REVENDA eh maior que 2
-print(selecao)
-
+# AND (&): ambas as condições devem ser verdadeiras
+selecao = (data['ESTADO'] == 'RIO DE JANEIRO') & (data['PREÇO MÉDIO REVENDA'] > 2.0)
+print("\nRIO DE JANEIRO com preço > 2.0 (AND):")
 print(data[selecao])
+
+# OR (|): pelo menos uma condição verdadeira
+selecao = (data['ESTADO'] == 'RIO DE JANEIRO') | (data['PREÇO MÉDIO REVENDA'] > 2.0)
+print("\nRIO DE JANEIRO OU preço > 2.0 (OR):")
+print(data[selecao])
+
+# XOR (!=): uma condição verdadeira e a outra falsa
+selecao = (data['ESTADO'] == 'RIO DE JANEIRO') != (data['PREÇO MÉDIO REVENDA'] > 2.0)
+print("\nXOR entre estado=RJ e preço>2.0:")
+print(data[selecao])
+
+# ============================================================
+# FILTROS ENCADEADOS
+# ============================================================
 
 select_1 = (data['ESTADO'] == 'RIO DE JANEIRO')
 df_rj = data[select_1]
-print(df_rj)
 
 select_2 = df_rj['PREÇO MÉDIO REVENDA'] > 2.0
-print(select_2)
-
 df_rj_preco = df_rj[select_2]
+print("\nFiltro encadeado (RJ com preço > 2.0):")
 print(df_rj_preco)
 
-selecao = (data['ESTADO'] == 'RIO DE JANEIRO') | (data['ESTADO'] == 'SAO PAULO')
-print(selecao)
-print(data[selecao])
+# ============================================================
+# FILTROS COMBINADOS (MÚLTIPLAS CONDIÇÕES)
+# ============================================================
 
-selecao_2 = (data['PRODUTO'] == 'GASOLINA COMUM')
-print(selecao_2)
-print(data[selecao_2])
+selecao_estados = (data['ESTADO'] == 'RIO DE JANEIRO') | (data['ESTADO'] == 'SAO PAULO')
+selecao_produto = (data['PRODUTO'] == 'GASOLINA COMUM')
+selecao_preco = (data['PREÇO MÉDIO REVENDA'] > 2.0)
 
-
-select_3 = (data['PREÇO MÉDIO REVENDA']> 2.0)
-print(select_3)
-print(data[select_3])
-
-
-select_final = selecao & selecao_2 & select_3
-print(select_final)
+# Combinação de 3 condições com AND
+select_final = selecao_estados & selecao_produto & selecao_preco
+print("\nGasolina comum em RJ/SP com preço > 2.0:")
 print(data[select_final])
 
-
-select = (data['ESTADO'] == 'RIO DE JANEIRO') | (data['ESTADO'] == 'SAO PAULO') & (data['PRODUTO'] == 'GASOLINA COMUM') & (data['PREÇO MÉDIO REVENDA']> 2.0)
-print(select)
+# Combinação direta em uma única expressão
+select = ((data['ESTADO'] == 'RIO DE JANEIRO') | (data['ESTADO'] == 'SAO PAULO'])
+          & (data['PRODUTO'] == 'GASOLINA COMUM')
+          & (data['PREÇO MÉDIO REVENDA'] > 2.0))
+print("\nMesmo filtro em expressão única:")
 print(data[select])

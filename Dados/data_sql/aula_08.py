@@ -1,26 +1,28 @@
-# SELECT
+"""
+SQLite: Comando SELECT básico.
+
+Demonstra consultas SELECT para listar dados de todas as tabelas
+do banco loja.db, incluindo seleção de colunas específicas.
+"""
+import sqlite3
+import pandas as pd
+
 
 def dml():
-    import sqlite3
-    import pandas as pd
-    
-    # Conecta ao banco
+    """Executa consulta SELECT e exibe resultado como DataFrame."""
     con = sqlite3.connect('./table/loja.db')
     cur = con.cursor()
-    
+
     query = input('Digite a Query desejada: ')
     cur.execute(query)
-    
-    users = cur.fetchall() # retorna uma tupla
 
-    # seleciona os nomes das colunas
-    coluns = [desc[0] for desc in cur.description]
+    registros = cur.fetchall()
+    colunas = [desc[0] for desc in cur.description]
 
-    # cria um dataframe a partir da tupla e das colunas
-    df_clientes = pd.DataFrame(users, columns=coluns)
-    print(df_clientes)
+    df = pd.DataFrame(registros, columns=colunas)
+    print(df)
 
-    con.close
+    con.close()
     
 '''
 SELECT * FROM cliente;
