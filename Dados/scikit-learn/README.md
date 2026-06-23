@@ -10,8 +10,8 @@ scikit-learn/
 ├── aula_02/              # Pré-processamento (imputação, encoding, scaling)
 ├── aula_03/              # Engenharia de features (polynomial, seleção, transformação)
 ├── aula_04/              # Métricas de regressão e regularização (Ridge/Lasso)
-├── aula_05/              # (vazio)
-├── aula_06/              # (vazio)
+├── aula_05/              # Regressão Logística (breast cancer, ROC/AUC)
+├── aula_06/              # Comparação KNN vs SVM (make_moons)
 └── ml_exercices/         # Exercícios práticos
     ├── train_test_split.ipynb
     ├── regressao_linear.ipynb
@@ -34,6 +34,8 @@ scikit-learn/
 | 02 | Pré-processamento | `SimpleImputer`, `KNNImputer`, `OneHotEncoder`, `LabelEncoder`, `StandardScaler` |
 | 03 | Feature Engineering | `PolynomialFeatures`, `SelectKBest`, `RFE`, `PowerTransformer` |
 | 04 | Regressão | MAE/MSE/RMSE/MAPE/R²; overfitting; Ridge e Lasso regularization |
+| 05 | Regressão Logística | Classificação binária (breast cancer); matriz de confusão; curva ROC e AUC |
+| 06 | Comparação de Modelos | KNN, SVM Linear e SVM RBF em dados não-lineares (make_moons) |
 
 ### Exercícios
 
