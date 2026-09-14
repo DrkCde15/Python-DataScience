@@ -12,6 +12,9 @@ pyspark/
 │   └── marcas_duplicadas.csv  # Lista de marcas duplicadas para exercícios
 ├── Aula 1 - PySpark.ipynb
 ├── Aula 2 - PySpark.ipynb
+├── Aula 3 - PySpark.ipynb
+├── Aula 4 - PySpark.ipynb
+├── Aula 5 - PySpark.ipynb
 └── README.md
 ```
 
@@ -29,6 +32,19 @@ pyspark/
 - Leitura de CSV com opções de `header`, `encoding` e `sep`
 - Conversão e escrita em múltiplos formatos: **Parquet**, **JSON** e **Avro**
 - Leitura de arquivos JSON com `spark.read.format('json')`
+
+### Aula 3 - PySpark: Select
+- Seleção de colunas específicas com `select()`
+- Criação de Views temporárias com `createOrReplaceTempView()`
+- Uso de SQL no Spark para manipulação de dados
+
+### Aula 4 - PySpark: Filtros
+- Aplicação de filtros em DataFrames com `where()`
+- Condições de filtragem para seleção de registros
+
+### Aula 5 - PySpark: Removendo Duplicados
+- Identificação de registros duplicados
+- Remoção de duplicatas com `dropDuplicates()`
 
 ---
 
@@ -70,6 +86,10 @@ pyspark/
 - Leitura e escrita de dados com PySpark
 - Trabalhar com os formatos CSV, Parquet, JSON e Avro
 - Uso de modos de escrita (`overwrite`, `append`)
+- Seleção de colunas com `select()`
+- Criação de Views temporárias e uso de SQL
+- Filtros com `where()` para seleção de registros
+- Remoção de duplicatas com `dropDuplicates()`
 - Manipulação básica de DataFrames no Databricks
 
 ---
