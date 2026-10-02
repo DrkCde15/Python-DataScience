@@ -22,6 +22,10 @@ pyspark/
 ├── Aula 8 - PySpark.ipynb     # Substring, Left e Right
 ├── Aula 9 - PySpark.ipynb     # JOINS (Inner, Left, Right)
 ├── Aula 10 - PySpark.ipynb    # Exists e Left Semi Join
+├── Aula 11 - PySpark.ipynb    # Not Exists e Left Anti Join
+├── Aula 12 - PySpark.ipynb    # NOT e filtros de nulos (isNull)
+├── Aula 13 - PySpark.ipynb    # Funções de agregação
+├── Aula 14 - PySpark.ipynb    # Row Number
 └── README.md
 ```
 
@@ -86,6 +90,26 @@ pyspark/
 - **LEFT SEMI JOIN**: Equivalente ao EXISTS no PySpark
 - Comparação entre abordagens SQL e API PySpark
 
+### Aula 11 - PySpark: Not Exists e Left Anti
+- Subquery `NOT EXISTS` para encontrar registros **ausentes** em outra tabela
+- **LEFT ANTI JOIN** com `join(..., 'leftanti')`: anti-join nativo do PySpark
+- Comparação entre `left_semi` (Aula 10) e `leftanti` (operações espelhadas)
+
+### Aula 12 - PySpark: Not e Filtros de Nulos
+- Filtragem de valores ausentes com `IS NULL` / `IS NOT NULL` no SQL
+- Uso de `col('coluna').isNull()` na API PySpark
+- Negação de condição com o operador `~` para filtrar não nulos
+
+### Aula 13 - PySpark: Funções de Agregação
+- Agregações `SUM()`, `MAX()` e `MIN()` com `GROUP BY`
+- Normalização de preço antes de agregar (`regexp_replace` + `cast`)
+- Agregação com `groupBy().agg()` e renomeação de colunas com `alias()`
+
+### Aula 14 - PySpark: Row Number
+- Função de janela `ROW_NUMBER()` com `OVER(PARTITION BY ... ORDER BY ...)`
+- Numeração de linhas por grupo (top-N por modelo)
+- Uso da classe `Window` com `partitionBy()` e `orderBy()` no PySpark
+
 ---
 
 ## Datasets
@@ -132,7 +156,11 @@ pyspark/
 - Remoção de duplicatas com `distinct()` e `dropDuplicates()`
 - Conversão de tipos de dados com `cast()`
 - Funções de string: `substring()`, `left()`, `right()`
-- Operações de JOIN: INNER, LEFT, RIGHT e LEFT SEMI
+- Operações de JOIN: INNER, LEFT, RIGHT, LEFT SEMI e LEFT ANTI
+- Subqueries `EXISTS` e `NOT EXISTS`
+- Filtragem de nulos com `isNull()` e negação com `~`
+- Agregações com `SUM()`, `MAX()`, `MIN()` e `GROUP BY`
+- Funções de janela com `ROW_NUMBER()` e a classe `Window`
 - Manipulação básica de DataFrames no Databricks
 
 ---
